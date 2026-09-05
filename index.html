@@ -1,0 +1,2050 @@
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#151116">
+<title>For Ravali Ma'am — Happy Teacher's Day ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+
+:root{
+--ink:#2d282d;
+--muted:#766e75;
+--cream:#fffaf3;
+--paper:#fffefa;
+--pink:#ff4f78;
+--pink2:#ff9bb0;
+--rose:#ffe3ea;
+--mint:#d9f7e9;
+--yellow:#fff2bd;
+--blue:#dff2fb;
+--green:#173f32;
+--line:rgba(54,43,49,.085);
+--shadow:0 28px 80px rgba(50,32,42,.15)
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+background:#111015;
+color:var(--ink);
+font-family:'DM Sans',sans-serif;
+overflow-x:hidden
+}
+
+button{font:inherit}
+.hidden{display:none!important}
+#app{min-height:100vh}
+
+.scene{
+min-height:100svh;
+position:relative;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:78px 16px 42px
+}
+
+.light{background:var(--cream)}
+.dark{background:#111015;color:#fffaf6}
+
+.grid{
+position:absolute;
+inset:0;
+pointer-events:none;
+background-image:
+linear-gradient(var(--line) 1px,transparent 1px),
+linear-gradient(90deg,var(--line) 1px,transparent 1px);
+background-size:31px 31px
+}
+
+.dark .grid{
+--line:rgba(255,255,255,.045)
+}
+
+.content{
+width:min(1040px,100%);
+position:relative;
+z-index:3
+}
+
+.blob{
+position:absolute;
+border-radius:50%;
+filter:blur(2px);
+opacity:.72;
+pointer-events:none
+}
+
+.blob.a{
+width:310px;
+height:310px;
+background:#ffd3de;
+left:-170px;
+top:5%
+}
+
+.blob.b{
+width:330px;
+height:330px;
+background:#c9f2df;
+right:-175px;
+bottom:2%
+}
+
+.blob.c{
+width:200px;
+height:200px;
+background:#fff0b4;
+right:5%;
+top:8%
+}
+
+.blob.d{
+width:170px;
+height:170px;
+background:#e6dcff;
+left:8%;
+bottom:8%
+}
+
+.topbar{
+position:fixed;
+z-index:100;
+top:0;
+left:0;
+right:0;
+padding:12px 15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+pointer-events:none
+}
+
+.topbar>*{pointer-events:auto}
+
+.badge{
+background:rgba(255,253,249,.84);
+backdrop-filter:blur(14px);
+border:1px solid rgba(255,255,255,.8);
+padding:9px 12px;
+border-radius:999px;
+font-size:.7rem;
+font-weight:800;
+letter-spacing:.05em
+}
+
+.sound{
+width:42px;
+height:42px;
+border:1px solid rgba(255,255,255,.16);
+border-radius:50%;
+background:rgba(30,24,32,.72);
+color:#fff;
+cursor:pointer;
+backdrop-filter:blur(12px);
+transition:.25s
+}
+
+.sound.playing{
+animation:musicPulse 1.2s ease-in-out infinite
+}
+
+@keyframes musicPulse{
+0%,100%{transform:scale(1)}
+50%{transform:scale(1.08)}
+}
+
+.eyebrow{
+text-transform:uppercase;
+letter-spacing:.18em;
+font-size:.66rem;
+font-weight:800;
+color:var(--pink);
+margin-bottom:12px
+}
+
+.display{
+font-family:'Playfair Display',serif;
+font-size:clamp(3.2rem,11vw,7.5rem);
+line-height:.9;
+letter-spacing:-.06em;
+margin:0 0 20px
+}
+
+.display span,.accent{color:var(--pink)}
+
+.lead{
+font-size:clamp(.98rem,2.5vw,1.15rem);
+line-height:1.75;
+color:var(--muted);
+max-width:760px
+}
+
+.dark .lead{color:#d8cfd7}
+
+.script{
+font-family:Caveat,cursive;
+font-size:clamp(1.7rem,5vw,2.5rem)
+}
+
+.cta{
+border:0;
+border-radius:999px;
+background:var(--pink);
+color:#fff;
+padding:15px 23px;
+font-weight:800;
+cursor:pointer;
+display:inline-flex;
+align-items:center;
+gap:10px;
+box-shadow:0 15px 38px rgba(255,79,120,.28);
+transition:.25s transform,.25s box-shadow
+}
+
+.cta:hover{
+transform:translateY(-3px);
+box-shadow:0 20px 45px rgba(255,79,120,.38)
+}
+
+.cta.secondary{
+background:transparent;
+color:inherit;
+border:1px solid currentColor;
+box-shadow:none
+}
+
+/* ENVELOPE */
+
+.opening{text-align:center}
+
+.opening .mini{
+font-size:.8rem;
+color:#8b818a;
+margin-top:18px
+}
+
+.envelope{
+width:min(370px,80vw);
+aspect-ratio:1.28;
+margin:30px auto 25px;
+position:relative;
+cursor:pointer;
+filter:drop-shadow(0 30px 35px rgba(0,0,0,.22));
+animation:float 4s ease-in-out infinite
+}
+
+.env-back{
+position:absolute;
+inset:0;
+background:#ffd0dc;
+border-radius:22px
+}
+
+.env-front{
+position:absolute;
+inset:auto 0 0;
+height:66%;
+background:#ff8da7;
+clip-path:polygon(0 0,50% 62%,100% 0,100% 100%,0 100%);
+border-radius:0 0 22px 22px
+}
+
+.env-flap{
+position:absolute;
+inset:0;
+background:#ffb4c4;
+clip-path:polygon(0 0,100% 0,50% 58%);
+transform-origin:top;
+transition:.7s cubic-bezier(.2,.8,.2,1);
+border-radius:22px 22px 0 0
+}
+
+.envelope.open .env-flap{
+transform:rotateX(180deg);
+z-index:0
+}
+
+.heart{
+position:absolute;
+left:50%;
+top:44%;
+transform:translate(-50%,-50%) rotate(-45deg);
+width:70px;
+height:70px;
+background:#fff;
+z-index:2;
+border-radius:10px
+}
+
+.heart:before,.heart:after{
+content:"";
+position:absolute;
+width:70px;
+height:70px;
+background:#fff;
+border-radius:50%
+}
+
+.heart:before{top:-35px}
+.heart:after{left:35px}
+
+.heart span{
+position:absolute;
+transform:rotate(45deg);
+z-index:2;
+left:20px;
+top:20px;
+color:var(--pink);
+font-size:29px
+}
+
+@keyframes float{
+50%{
+transform:translateY(-11px) rotate(1deg)
+}
+}
+
+/* PROFILE */
+
+.hero-card{
+background:rgba(255,253,249,.91);
+border:1px solid #fff;
+border-radius:36px;
+padding:clamp(28px,6vw,64px);
+box-shadow:var(--shadow);
+text-align:center;
+backdrop-filter:blur(10px)
+}
+
+.hero-card h2{
+font-family:'Playfair Display',serif;
+font-size:clamp(2.8rem,9vw,5.8rem);
+line-height:.94;
+margin:0 0 17px
+}
+
+.hero-card h2 span{color:var(--pink)}
+
+.profile{
+display:grid;
+grid-template-columns:.76fr 1.24fr;
+gap:30px;
+align-items:center
+}
+
+.portrait-frame{
+background:#fff;
+padding:12px 12px 18px;
+box-shadow:0 28px 65px rgba(50,30,40,.18);
+transform:rotate(-2deg);
+position:relative
+}
+
+.portrait-frame img{
+width:100%;
+display:block;
+aspect-ratio:4/5;
+object-fit:cover
+}
+
+.portrait-frame:after{
+content:'The teacher I will always remember ✨';
+display:block;
+text-align:center;
+font-family:Caveat,cursive;
+font-size:1.35rem;
+margin-top:8px
+}
+
+.tape{
+position:absolute;
+width:125px;
+height:30px;
+background:rgba(255,196,207,.62);
+left:50%;
+top:-15px;
+transform:translateX(-50%) rotate(2deg);
+z-index:2
+}
+
+.profile-copy h2{
+font-family:'Playfair Display',serif;
+font-size:clamp(2.8rem,8vw,5.8rem);
+line-height:.92;
+margin:0 0 16px
+}
+
+.profile-copy h2 span{color:var(--pink)}
+
+.chips{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin:20px 0
+}
+
+.chip{
+padding:8px 11px;
+border-radius:999px;
+background:#fff;
+border:1px solid #eee1e5;
+font-size:.74rem;
+font-weight:700
+}
+
+.quote{
+margin:20px 0;
+padding:18px 20px;
+border-left:4px solid var(--pink);
+background:#fff2f5;
+border-radius:0 18px 18px 0;
+font-family:Caveat,cursive;
+font-size:1.55rem;
+text-align:left
+}
+
+/* LESSONS */
+
+.section-head{
+text-align:center;
+max-width:780px;
+margin:0 auto 34px
+}
+
+.section-head h2{
+font-family:'Playfair Display',serif;
+font-size:clamp(2.35rem,7vw,4.6rem);
+line-height:.98;
+margin:0 0 13px
+}
+
+.reveal-in{
+opacity:0;
+transform:translateY(25px);
+transition:.8s ease
+}
+
+.reveal-in.visible{
+opacity:1;
+transform:none
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:16px
+}
+
+.lesson{
+min-height:235px;
+border-radius:27px;
+padding:23px;
+position:relative;
+overflow:hidden;
+cursor:pointer;
+border:1px dashed rgba(50,40,48,.12);
+transition:.3s transform,.3s box-shadow
+}
+
+.lesson:hover{
+transform:translateY(-6px);
+box-shadow:0 18px 45px rgba(50,30,40,.12)
+}
+
+.lesson.pink{background:var(--rose)}
+.lesson.mint{background:var(--mint)}
+.lesson.yellow{background:var(--yellow)}
+.lesson.blue{background:var(--blue)}
+
+.num{
+display:inline-block;
+background:rgba(255,255,255,.72);
+padding:7px 10px;
+border-radius:999px;
+font-size:.68rem;
+font-weight:800;
+letter-spacing:.08em
+}
+
+.icon{
+width:65px;
+height:65px;
+border-radius:50%;
+display:grid;
+place-items:center;
+background:rgba(255,255,255,.76);
+font-size:29px;
+box-shadow:0 9px 22px rgba(55,40,50,.09);
+margin:17px 0 14px
+}
+
+.lesson h3{
+margin:0;
+font-size:1.3rem
+}
+
+.lesson p{
+color:#625b63;
+line-height:1.55;
+font-size:.92rem
+}
+
+.lesson .reveal{
+max-height:0;
+opacity:0;
+overflow:hidden;
+transition:.45s
+}
+
+.lesson.active .reveal{
+max-height:150px;
+opacity:1
+}
+
+.lesson .tap{
+position:absolute;
+right:18px;
+bottom:17px;
+font-size:.7rem;
+opacity:.55
+}
+
+.lesson.active .tap{display:none}
+
+/* PHOTOS */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px
+}
+
+.polaroid{
+background:#fff;
+padding:10px 10px 18px;
+box-shadow:0 18px 40px rgba(47,30,38,.14);
+cursor:pointer;
+transition:.35s;
+transform:rotate(-2deg);
+position:relative
+}
+
+.polaroid:nth-child(2n){
+transform:rotate(2deg);
+margin-top:24px
+}
+
+.polaroid:nth-child(3n){
+transform:rotate(-1deg)
+}
+
+.polaroid:hover{
+transform:rotate(0) translateY(-8px) scale(1.025);
+z-index:4
+}
+
+.polaroid img{
+display:block;
+width:100%;
+aspect-ratio:1/1.18;
+object-fit:cover;
+border-radius:4px
+}
+
+.polaroid.landscape{
+grid-column:span 2
+}
+
+.polaroid.landscape img{
+aspect-ratio:16/10
+}
+
+.polaroid figcaption{
+font-family:Caveat,cursive;
+font-size:1.35rem;
+text-align:center;
+margin-top:8px;
+color:#514950
+}
+
+.gallery-note{
+text-align:center;
+color:#8b8088;
+font-size:.82rem;
+margin-top:20px
+}
+
+/* NOTE */
+
+.note-wrap{
+max-width:900px;
+margin:auto
+}
+
+.note{
+background:#fffdf8;
+border-radius:8px;
+padding:clamp(28px,6vw,58px);
+box-shadow:0 28px 70px rgba(46,29,37,.14);
+position:relative;
+background-image:linear-gradient(rgba(255,180,195,.16) 1px,transparent 1px);
+background-size:100% 34px
+}
+
+.note:before{
+content:'';
+position:absolute;
+left:20px;
+top:0;
+bottom:0;
+width:1px;
+background:rgba(255,91,123,.18)
+}
+
+.note h3{
+font-family:Caveat,cursive;
+font-size:2rem;
+margin:0 0 20px;
+padding-left:22px;
+color:#423b42
+}
+
+.note p{
+font-family:Caveat,cursive;
+font-size:clamp(1.45rem,4vw,2rem);
+line-height:1.55;
+margin:0;
+padding-left:22px;
+white-space:pre-line
+}
+
+.note .sign{
+margin-top:24px;
+padding-left:22px;
+color:var(--pink);
+font-weight:700;
+font-family:Caveat,cursive;
+font-size:1.65rem
+}
+
+/* FINAL */
+
+.final h2{
+font-family:'Playfair Display',serif;
+font-size:clamp(3.4rem,10vw,7rem);
+line-height:.9;
+margin:0 0 20px
+}
+
+.blackboard{
+max-width:760px;
+margin:32px auto 24px;
+background:#153e31;
+border:13px solid #a76b22;
+border-radius:6px;
+padding:36px 24px;
+box-shadow:0 24px 55px rgba(0,0,0,.35)
+}
+
+.blackboard p{
+font-family:Caveat,cursive;
+font-size:clamp(2rem,5vw,3.2rem);
+line-height:1.2;
+margin:0;
+color:#f7f6ee
+}
+
+.final-card{
+background:#fff;
+border-radius:25px;
+padding:23px;
+max-width:520px;
+margin:0 auto 24px;
+color:#332d33;
+box-shadow:0 18px 45px rgba(0,0,0,.18)
+}
+
+.final-card strong{
+display:block;
+font-family:Caveat,cursive;
+font-size:2.5rem;
+color:var(--pink)
+}
+
+.tiny{
+font-size:.72rem;
+color:#81777e;
+margin-top:5px
+}
+
+/* MODAL */
+
+.modal{
+position:fixed;
+inset:0;
+background:rgba(10,8,12,.82);
+backdrop-filter:blur(10px);
+display:none;
+place-items:center;
+z-index:300;
+padding:18px
+}
+
+.modal.show{display:grid}
+
+.modal-box{
+max-width:900px;
+max-height:90vh;
+position:relative
+}
+
+.modal-box img{
+max-width:100%;
+max-height:88vh;
+border-radius:18px;
+display:block;
+box-shadow:0 30px 90px rgba(0,0,0,.5)
+}
+
+.close{
+position:absolute;
+right:-10px;
+top:-15px;
+width:40px;
+height:40px;
+border:0;
+border-radius:50%;
+background:#fff;
+color:#222;
+font-size:25px;
+cursor:pointer;
+z-index:2
+}
+
+.scrolltop{
+position:fixed;
+right:16px;
+bottom:18px;
+width:44px;
+height:44px;
+border:0;
+border-radius:50%;
+background:#fff;
+color:#333;
+box-shadow:0 10px 30px rgba(0,0,0,.18);
+z-index:90;
+cursor:pointer;
+display:none
+}
+
+.scrolltop.show{display:block}
+
+.particle{
+position:fixed;
+z-index:500;
+pointer-events:none;
+animation:fall 3.2s cubic-bezier(.1,.8,.2,1) forwards;
+font-size:20px
+}
+
+@keyframes fall{
+0%{
+transform:translateY(0) rotate(0) scale(.7);
+opacity:0
+}
+
+10%{opacity:1}
+
+100%{
+transform:translateY(85vh) rotate(420deg) scale(1.15);
+opacity:0
+}
+}
+
+footer{
+text-align:center;
+background:#111015;
+color:#988e96;
+padding:24px;
+font-size:.72rem
+}
+
+@media(max-width:760px){
+
+.scene{padding-top:72px}
+
+.profile{
+grid-template-columns:1fr;
+gap:25px
+}
+
+.portrait-frame{
+width:min(430px,88%);
+margin:auto
+}
+
+.profile-copy{text-align:center}
+.quote{text-align:center}
+
+.cards{grid-template-columns:1fr}
+
+.gallery{
+grid-template-columns:repeat(2,1fr);
+gap:14px
+}
+
+.polaroid.landscape{
+grid-column:span 2
+}
+
+.gallery .polaroid:nth-child(2n){
+margin-top:12px
+}
+
+.hero-card{padding:28px 20px}
+
+.blackboard{
+border-width:9px;
+padding:28px 17px
+}
+
+.note:before{left:13px}
+
+.note{
+padding:27px 17px
+}
+
+.note p,
+.note h3,
+.note .sign{
+padding-left:17px
+}
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+*,
+*::before,
+*::after{
+scroll-behavior:auto!important;
+animation-duration:.01ms!important;
+transition-duration:.01ms!important
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================================
+     REAL BACKGROUND MUSIC
+========================================= -->
+
+<audio id="bgMusic" loop preload="auto">
+    <source src="assets/teacher-song.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+
+    <div class="badge">
+        A LITTLE SURPRISE • 05 SEPTEMBER
+    </div>
+
+    <button
+        class="sound"
+        id="soundBtn"
+        aria-label="Play or pause music"
+        title="Play / Pause Music">
+        ♪
+    </button>
+
+</div>
+
+
+<div id="app">
+
+<!-- =========================================
+     INTRO
+========================================= -->
+
+<section class="scene light opening" id="intro">
+
+<div class="grid"></div>
+
+<div class="blob a"></div>
+<div class="blob c"></div>
+
+<div class="content">
+
+<div class="eyebrow">
+For one very special teacher
+</div>
+
+<h1 class="display">
+A little <span>surprise</span><br>
+for you…
+</h1>
+
+<div
+class="envelope"
+id="envelope"
+role="button"
+tabindex="0"
+aria-label="Open surprise">
+
+<div class="env-back"></div>
+
+<div class="heart">
+<span>♥</span>
+</div>
+
+<div class="env-front"></div>
+
+<div class="env-flap"></div>
+
+</div>
+
+<button class="cta" id="openBtn">
+Open the surprise
+<span>→</span>
+</button>
+
+<div class="mini">
+Okkati cheppali… but direct ga cheppadam kanna,
+ila cheppali anipinchindi. ❤️
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     WELCOME
+========================================= -->
+
+<section
+class="scene light hidden"
+id="welcome">
+
+<div class="grid"></div>
+
+<div class="blob b"></div>
+
+<div class="content">
+
+<div class="hero-card reveal-in">
+
+<div class="profile">
+
+<div class="portrait-frame">
+
+<div class="tape"></div>
+
+<img
+src="assets/ravali-portrait.jpg"
+alt="Ravali Ma'am portrait">
+
+</div>
+
+<div class="profile-copy">
+
+<div class="eyebrow">
+Happy Teacher's Day
+</div>
+
+<h2>
+Ravali <span>Ma'am</span> ❤️
+</h2>
+
+<p class="lead">
+You may be my Data Science teacher by profession,
+but for me, you became someone I genuinely respect
+and remember beyond the classroom.
+</p>
+
+<div class="chips">
+
+<span class="chip">Data Science</span>
+<span class="chip">Patience</span>
+<span class="chip">Guidance</span>
+<span class="chip">Caring nature</span>
+
+</div>
+
+<div class="quote">
+“Kondharu teachers subject matrame nerpistharu…
+but miru subject tho patu students ni inspire chestharu.”
+</div>
+
+<button
+class="cta"
+data-next="#lessons">
+
+Start the lesson
+<span>→</span>
+
+</button>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- =========================================
+     LESSONS
+========================================= -->
+
+<section
+class="scene light hidden"
+id="lessons">
+
+<div class="grid"></div>
+
+<div class="blob d"></div>
+
+<div class="content">
+
+<div class="section-head reveal-in">
+
+<div class="eyebrow">
+Things I genuinely learned
+</div>
+
+<h2>
+Not everything was in the syllabus.
+</h2>
+
+<p class="lead" style="margin:auto">
+Tap each one. These are the lessons I personally take with me.
+</p>
+
+</div>
+
+
+<div class="cards reveal-in">
+
+<article class="lesson pink">
+
+<span class="num">
+LESSON 01
+</span>
+
+<div class="icon">
+♥
+</div>
+
+<h3>
+Patience
+</h3>
+
+<p class="reveal">
+Even when something took time to understand,
+you never made asking feel like a problem.
+Adi chala valuable.
+</p>
+
+<span class="tap">
+tap to open
+</span>
+
+</article>
+
+
+<article class="lesson mint">
+
+<span class="num">
+LESSON 02
+</span>
+
+<div class="icon">
+🌱
+</div>
+
+<h3>
+Confidence
+</h3>
+
+<p class="reveal">
+You made difficult topics feel manageable.
+Slowly, “naaku raadhu” became
+“okay, try chestha.”
+</p>
+
+<span class="tap">
+tap to open
+</span>
+
+</article>
+
+
+<article class="lesson yellow">
+
+<span class="num">
+LESSON 03
+</span>
+
+<div class="icon">
+☺
+</div>
+
+<h3>
+Kindness
+</h3>
+
+<p class="reveal">
+The way you listen, help and take care
+of students is something I noticed
+more than any particular lecture.
+</p>
+
+<span class="tap">
+tap to open
+</span>
+
+</article>
+
+
+<article class="lesson blue">
+
+<span class="num">
+LESSON 04
+</span>
+
+<div class="icon">
+✦
+</div>
+
+<h3>
+Being a good human
+</h3>
+
+<p class="reveal">
+Marks and subjects change.
+The way someone makes others feel stays.
+That's probably the biggest lesson.
+</p>
+
+<span class="tap">
+tap to open
+</span>
+
+</article>
+
+</div>
+
+
+<div style="text-align:center;margin-top:30px">
+
+<button
+class="cta"
+data-next="#memories">
+
+Now, some real memories
+<span>→</span>
+
+</button>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     MEMORIES
+========================================= -->
+
+<section
+class="scene light hidden"
+id="memories">
+
+<div class="grid"></div>
+
+<div class="blob b"></div>
+
+<div class="content">
+
+<div class="section-head reveal-in">
+
+<div class="eyebrow">
+Real photos. Real memories.
+</div>
+
+<h2>
+A few moments I wanted to keep.
+</h2>
+
+<p class="lead" style="margin:auto">
+No filters. No made-up story.
+Just a few photographs that made me smile
+while putting this together.
+</p>
+
+</div>
+
+
+<div class="gallery reveal-in">
+
+<figure class="polaroid">
+
+<img
+src="assets/ravali-portrait.jpg"
+alt="Ravali Ma'am portrait">
+
+<figcaption>
+That smile ✨
+</figcaption>
+
+</figure>
+
+
+<figure class="polaroid">
+
+<img
+src="assets/ravali-mirror.jpg"
+alt="Ravali Ma'am in a mirror room">
+
+<figcaption>
+A random happy moment
+</figcaption>
+
+</figure>
+
+
+<figure class="polaroid landscape">
+
+<img
+src="assets/faculty-group.jpg"
+alt="Faculty group photograph">
+
+<figcaption>
+One of those days worth remembering ❤️
+</figcaption>
+
+</figure>
+
+
+<figure class="polaroid landscape">
+
+<img
+src="assets/teachers-gifts.jpg"
+alt="Teachers together with gifts">
+
+<figcaption>
+Good people. Good memories.
+</figcaption>
+
+</figure>
+
+
+<figure class="polaroid landscape">
+
+<img
+src="assets/teachers-gifts1.jpeg"
+alt="Teachers enjoying their gifts ">
+
+<figcaption>
+Teachers enjoying their gifts .
+</figcaption>
+
+</figure>
+
+</div>
+
+
+<div class="gallery-note">
+Tap a photo to see it properly.
+</div>
+
+
+<div style="text-align:center;margin-top:28px">
+
+<button
+class="cta"
+data-next="#funny">
+
+Okay… one small funny moment 😂
+<span>→</span>
+
+</button>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     FUNNY
+========================================= -->
+
+<section
+class="scene light hidden"
+id="funny">
+
+<div class="grid"></div>
+
+<div class="content">
+
+<div class="section-head reveal-in">
+
+<div class="eyebrow">
+A tiny student confession
+</div>
+
+<h2>
+Ma'am, one last doubt…
+</h2>
+
+<p class="lead" style="margin:auto">
+We both know “one last doubt” has never meant
+one last doubt. 😂
+</p>
+
+</div>
+
+
+<div
+class="hero-card reveal-in"
+style="max-width:760px;margin:auto;background:#fff3f6">
+
+<div class="script">
+Student logic:
+</div>
+
+<h3 style="font-size:1.6rem;margin:10px 0">
+“Ma'am, this is the last question.”
+</h3>
+
+<p class="lead" style="margin:auto">
+Question ends → another question appears →
+discussion starts → suddenly time is over. 😭
+</p>
+
+<div
+class="quote"
+style="margin:25px 0 0;text-align:center">
+
+But honestly… your patience with all those doubts
+is something I'll always appreciate.
+
+</div>
+
+</div>
+
+
+<div style="text-align:center;margin-top:30px">
+
+<button
+class="cta"
+data-next="#letter">
+
+Okay, jokes aside…
+<span>→</span>
+
+</button>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     LETTER
+========================================= -->
+
+<section
+class="scene light hidden"
+id="letter">
+
+<div class="grid"></div>
+
+<div class="blob c"></div>
+
+<div class="content">
+
+<div class="section-head reveal-in">
+
+<div class="eyebrow">
+From me, personally
+</div>
+
+<h2>
+This is the part I really wanted to say.
+</h2>
+
+</div>
+
+
+<div class="note-wrap reveal-in">
+
+<div class="note">
+
+<h3>
+Dear Ravali Ma'am,
+</h3>
+
+<p id="typed"></p>
+
+<div class="sign">
+— Rahul ❤️
+</div>
+
+</div>
+
+</div>
+
+
+<div style="text-align:center;margin-top:30px">
+
+<button
+class="cta"
+data-next="#final">
+
+One last thing…
+<span>→</span>
+
+</button>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     FINAL
+========================================= -->
+
+<section
+class="scene dark final hidden"
+id="final">
+
+<div class="grid"></div>
+
+<div class="blob a"></div>
+
+<div
+class="content"
+style="text-align:center">
+
+<div class="eyebrow">
+Class dismissed.
+</div>
+
+<h2>
+But some lessons<br>
+<span class="accent">
+stay forever.
+</span>
+</h2>
+
+<p
+class="lead"
+style="margin:0 auto">
+
+Subject may be Data Science.
+But the things I remember most are the patience,
+guidance, kindness and the way you cared about us.
+
+</p>
+
+
+<div class="blackboard">
+
+<p>
+Thank you, Ma'am.<br>
+For everything you taught me —<br>
+inside and outside the classroom.
+</p>
+
+</div>
+
+
+<div class="final-card">
+
+<div class="script">
+Happy Teacher's Day,
+</div>
+
+<strong>
+Ravali Ma'am ❤️
+</strong>
+
+<div class="tiny">
+With respect, gratitude & a little student chaos • Rahul
+</div>
+
+</div>
+
+
+<button
+class="cta"
+id="celebrate">
+
+Make it rain hearts ✨
+
+</button>
+
+
+<div style="margin-top:20px">
+
+<button
+class="cta secondary"
+id="restart">
+
+Replay the surprise
+
+</button>
+
+</div>
+
+</div>
+</section>
+
+</div>
+
+
+<!-- =========================================
+     PHOTO MODAL
+========================================= -->
+
+<div
+class="modal"
+id="modal">
+
+<div class="modal-box">
+
+<button
+class="close"
+id="close">
+
+×
+
+</button>
+
+<img
+id="modalImg"
+alt="Expanded memory">
+
+</div>
+</div>
+
+
+<button
+class="scrolltop"
+id="scrollTop"
+aria-label="Back to top">
+
+↑
+
+</button>
+
+
+<footer>
+Made with gratitude, a little code, and a lot of respect. ❤️
+</footer>
+
+
+<script>
+
+/* =========================================
+   BASIC SELECTORS
+========================================= */
+
+const $ = s => document.querySelector(s);
+
+const $$ = s => [...document.querySelectorAll(s)];
+
+
+/* =========================================
+   REAL MUSIC
+========================================= */
+
+const bgMusic = $('#bgMusic');
+
+const soundBtn = $('#soundBtn');
+
+let musicPlaying = false;
+
+let typedOnce = false;
+
+
+/* Volume
+   0.0 = silent
+   1.0 = maximum
+*/
+
+bgMusic.volume = 0.5;
+
+
+/* =========================================
+   PLAY MUSIC
+========================================= */
+
+function playMusic(){
+
+    bgMusic.play()
+        .then(() => {
+
+            musicPlaying = true;
+
+            soundBtn.textContent = '♫';
+
+            soundBtn.classList.add('playing');
+
+        })
+        .catch(() => {
+
+            console.log(
+                'Music could not start automatically.'
+            );
+
+        });
+
+}
+
+
+/* =========================================
+   PAUSE MUSIC
+========================================= */
+
+function pauseMusic(){
+
+    bgMusic.pause();
+
+    musicPlaying = false;
+
+    soundBtn.textContent = '♪';
+
+    soundBtn.classList.remove('playing');
+
+}
+
+
+/* =========================================
+   MUSIC BUTTON
+========================================= */
+
+soundBtn.onclick = () => {
+
+    if(musicPlaying){
+
+        pauseMusic();
+
+    }else{
+
+        playMusic();
+
+    }
+
+};
+
+
+/* =========================================
+   REVEAL ANIMATIONS
+========================================= */
+
+function reveal(root=document){
+
+    root.querySelectorAll(
+        '.reveal-in'
+    ).forEach((e,i)=>{
+
+        setTimeout(
+            ()=>e.classList.add('visible'),
+            i*100
+        );
+
+    });
+
+}
+
+
+/* =========================================
+   SHOW SECTIONS
+========================================= */
+
+function show(id){
+
+    $$('.scene').forEach(
+        s => s.classList.add('hidden')
+    );
+
+    const el = $(id);
+
+    el.classList.remove('hidden');
+
+    window.scrollTo({
+        top:0,
+        behavior:'smooth'
+    });
+
+    setTimeout(
+        ()=>reveal(el),
+        80
+    );
+
+    if(id === '#letter'){
+
+        typeLetter();
+
+    }
+
+}
+
+
+/* =========================================
+   OPEN SURPRISE
+========================================= */
+
+$('#openBtn').onclick = () => {
+
+    $('#envelope').classList.add('open');
+
+
+    /*
+       IMPORTANT:
+       The real music starts here because
+       the user has clicked a button.
+       This is allowed by modern browsers.
+    */
+
+    playMusic();
+
+
+    setTimeout(
+        ()=>show('#welcome'),
+        520
+    );
+
+};
+
+
+/* =========================================
+   ENVELOPE CLICK
+========================================= */
+
+$('#envelope').onclick =
+    () => $('#openBtn').click();
+
+
+$('#envelope').onkeydown = e => {
+
+    if(
+        e.key === 'Enter' ||
+        e.key === ' '
+    ){
+
+        e.preventDefault();
+
+        $('#openBtn').click();
+
+    }
+
+};
+
+
+/* =========================================
+   NEXT BUTTONS
+========================================= */
+
+$$('[data-next]').forEach(
+    b => {
+
+        b.onclick = () =>
+            show(b.dataset.next);
+
+    }
+);
+
+
+/* =========================================
+   LESSON CARDS
+========================================= */
+
+$$('.lesson').forEach(c => {
+
+    c.onclick = () => {
+
+        c.classList.toggle('active');
+
+    };
+
+});
+
+
+/* =========================================
+   LETTER
+========================================= */
+
+const msg = `Thank you for being a teacher who made learning feel a little easier and people feel a little more comfortable.
+
+For explaining things patiently, for helping when I was confused, and for being someone I could genuinely respect — thank you.
+
+Nijam ga cheppalante, every teacher teaches a subject, but very few leave behind lessons that stay with us even after the class is over. I feel lucky that I got to learn from you.
+
+I may forget some topics, definitions or code someday… but I don't think I'll forget the way you guided and cared for students.
+
+Happy Teacher's Day, Ma'am. ❤️`;
+
+
+function typeLetter(){
+
+    if(typedOnce) return;
+
+    typedOnce = true;
+
+    const box = $('#typed');
+
+    let i = 0;
+
+
+    function tick(){
+
+        box.textContent =
+            msg.slice(0,i++);
+
+        if(i <= msg.length){
+
+            setTimeout(
+                tick,
+                14
+            );
+
+        }
+
+    }
+
+    tick();
+
+}
+
+
+/* =========================================
+   PHOTO MODAL
+========================================= */
+
+$$('.polaroid img').forEach(img => {
+
+    img.onclick = () => {
+
+        $('#modalImg').src =
+            img.src;
+
+        $('#modal').classList.add(
+            'show'
+        );
+
+    };
+
+});
+
+
+$('#close').onclick = () => {
+
+    $('#modal').classList.remove(
+        'show'
+    );
+
+};
+
+
+$('#modal').onclick = e => {
+
+    if(e.target.id === 'modal'){
+
+        $('#modal').classList.remove(
+            'show'
+        );
+
+    }
+
+};
+
+
+/* =========================================
+   HEART EFFECT
+========================================= */
+
+function burst(count=130){
+
+    const chars = [
+        '♥',
+        '❤',
+        '✦',
+        '✧',
+        '🌸',
+        '✨',
+        '📚',
+        '🎓'
+    ];
+
+
+    for(
+        let i=0;
+        i<count;
+        i++
+    ){
+
+        const p =
+            document.createElement('div');
+
+        p.className =
+            'particle';
+
+        p.textContent =
+            chars[
+                Math.floor(
+                    Math.random() *
+                    chars.length
+                )
+            ];
+
+        p.style.left =
+            (5 + Math.random()*90) +
+            'vw';
+
+        p.style.top =
+            (6 + Math.random()*12) +
+            'vh';
+
+        p.style.animationDelay =
+            (Math.random()*.7) +
+            's';
+
+        p.style.fontSize =
+            (14 + Math.random()*20) +
+            'px';
+
+        document.body.appendChild(p);
+
+
+        setTimeout(
+            ()=>p.remove(),
+            3600
+        );
+
+    }
+
+}
+
+
+/* =========================================
+   CELEBRATE
+========================================= */
+
+$('#celebrate').onclick = () => {
+
+    burst();
+
+};
+
+
+/* =========================================
+   RESTART
+========================================= */
+
+$('#restart').onclick = () => {
+
+    typedOnce = false;
+
+    $('#typed').textContent = '';
+
+    $('#envelope').classList.remove(
+        'open'
+    );
+
+
+    /*
+       Restart music from beginning
+    */
+
+    bgMusic.currentTime = 0;
+
+    playMusic();
+
+
+    show('#intro');
+
+};
+
+
+/* =========================================
+   SCROLL TOP
+========================================= */
+
+$('#scrollTop').onclick = () => {
+
+    window.scrollTo({
+        top:0,
+        behavior:'smooth'
+    });
+
+};
+
+
+window.addEventListener(
+    'scroll',
+    () => {
+
+        $('#scrollTop').classList.toggle(
+            'show',
+            scrollY > 500
+        );
+
+    }
+);
+
+
+/* =========================================
+   INTERSECTION OBSERVER
+========================================= */
+
+const obs =
+    new IntersectionObserver(
+        es => es.forEach(
+            e => {
+
+                if(e.isIntersecting){
+
+                    reveal(e.target);
+
+                }
+
+            }
+        ),
+        {
+            threshold:.15
+        }
+    );
+
+
+$$('.scene').forEach(
+    s => obs.observe(s)
+);
+
+
+reveal(document);
+
+</script>
+
+</body>
+</html>
+```
