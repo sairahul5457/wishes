@@ -841,6 +841,307 @@ transition-duration:.01ms!important
 }
 
 }
+
+/* =========================================================
+   DEVICE RESPONSIVE LAYOUT
+   Automatically adapts to mobile, tablet and laptop/desktop
+   ========================================================= */
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+button, .cta, .envelope, .lesson, .polaroid {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Laptop / desktop */
+@media (min-width: 1101px) {
+    .scene {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .content {
+        width: min(1100px, 100%);
+    }
+
+    .hero-card {
+        padding: 60px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* Tablet and small laptops */
+@media (min-width: 761px) and (max-width: 1100px) {
+    .scene {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .content {
+        width: min(900px, 100%);
+    }
+
+    .profile {
+        grid-template-columns: .9fr 1.1fr;
+        gap: 24px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .polaroid.landscape {
+        grid-column: span 2;
+    }
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+    .scene {
+        width: 100%;
+        min-height: 100svh;
+        padding: 74px 14px 34px;
+    }
+
+    .content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .topbar {
+        padding:
+            max(10px, env(safe-area-inset-top))
+            10px
+            10px;
+    }
+
+    .badge {
+        max-width: calc(100vw - 70px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: .62rem;
+        padding: 8px 10px;
+    }
+
+    .sound {
+        flex: 0 0 40px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .display {
+        font-size: clamp(2.8rem, 15vw, 5rem);
+    }
+
+    .lead {
+        font-size: .96rem;
+        line-height: 1.65;
+    }
+
+    .opening .mini {
+        max-width: 330px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .envelope {
+        width: min(330px, 88vw);
+        margin-top: 24px;
+    }
+
+    .cta {
+        max-width: 100%;
+        min-height: 48px;
+        padding: 13px 18px;
+        font-size: .9rem;
+    }
+
+    .hero-card {
+        width: 100%;
+        padding: 25px 16px;
+        border-radius: 26px;
+    }
+
+    .profile {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .portrait-frame {
+        width: min(360px, 90%);
+    }
+
+    .profile-copy h2,
+    .hero-card h2 {
+        font-size: clamp(2.6rem, 13vw, 4.5rem);
+    }
+
+    .chips {
+        justify-content: center;
+    }
+
+    .quote {
+        font-size: 1.35rem;
+        padding: 15px 16px;
+    }
+
+    .section-head h2 {
+        font-size: clamp(2.25rem, 11vw, 4rem);
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .lesson {
+        min-height: 205px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        width: 100%;
+    }
+
+    .polaroid {
+        min-width: 0;
+        padding: 8px 8px 14px;
+    }
+
+    .polaroid.landscape {
+        grid-column: span 2;
+    }
+
+    .polaroid figcaption {
+        font-size: 1.15rem;
+    }
+
+    .note {
+        width: 100%;
+        padding: 25px 14px;
+    }
+
+    .note p {
+        font-size: clamp(1.3rem, 5.5vw, 1.8rem);
+        line-height: 1.5;
+    }
+
+    .blackboard {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 25px 14px;
+    }
+
+    .blackboard p {
+        font-size: clamp(1.7rem, 7vw, 2.7rem);
+    }
+
+    .final-card {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    .final h2 {
+        font-size: clamp(3rem, 14vw, 5.5rem);
+    }
+
+    .modal {
+        padding: 12px;
+    }
+
+    .modal-box {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .modal-box img {
+        width: 100%;
+        max-height: 82vh;
+        object-fit: contain;
+    }
+
+    .close {
+        right: 0;
+        top: -8px;
+    }
+
+    .scrolltop {
+        right: 12px;
+        bottom: max(14px, env(safe-area-inset-bottom));
+    }
+}
+
+/* Very small phones */
+@media (max-width: 420px) {
+    .scene {
+        padding-left: 11px;
+        padding-right: 11px;
+    }
+
+    .badge {
+        font-size: .56rem;
+        letter-spacing: .03em;
+    }
+
+    .gallery {
+        gap: 9px;
+    }
+
+    .polaroid {
+        padding: 6px 6px 12px;
+    }
+
+    .polaroid figcaption {
+        font-size: 1.02rem;
+    }
+
+    .lesson {
+        padding: 19px;
+    }
+
+    .icon {
+        width: 58px;
+        height: 58px;
+        margin-top: 14px;
+    }
+}
+
+/* Landscape phones */
+@media (max-width: 900px) and (orientation: landscape) {
+    .scene {
+        min-height: auto;
+        padding-top: 76px;
+        padding-bottom: 45px;
+    }
+
+    .profile {
+        grid-template-columns: .8fr 1.2fr;
+    }
+
+    .portrait-frame {
+        width: min(260px, 45vw);
+    }
+
+    .envelope {
+        width: min(300px, 55vw);
+    }
+}
+
 </style>
 </head>
 
@@ -851,7 +1152,7 @@ transition-duration:.01ms!important
 ========================================= -->
 
 <audio id="bgMusic" loop preload="auto">
-    <source src="assets/teacher-song.mp3" type="audio/mpeg">
+    <source src="teacher-song.mp3" type="audio/mpeg">
 </audio>
 
 
@@ -1203,7 +1504,7 @@ while putting this together.
 <figure class="polaroid">
 
 <img
-src="./ravali-portrait.jpg"
+src="ravali-portrait.jpg"
 alt="Ravali Ma'am portrait">
 
 <figcaption>
